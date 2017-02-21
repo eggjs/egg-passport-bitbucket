@@ -1,4 +1,4 @@
-# egg-passport-weibo
+# egg-passport-bitbucket
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -20,9 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/egg-passport-bitbucket.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-passport-bitbucket
 
-<!--
-Description here.
--->
+bitbucket passport plugin for egg.
 
 ## Install
 
@@ -33,8 +31,8 @@ $ npm i egg-passport-bitbucket --save
 ## Usage
 
 ```js
-// {app_root}/config/plugin.js
-exports['passport-bitbucket'] = {
+// config/plugin.js
+exports.passportBitbucket = {
   enable: true,
   package: 'egg-passport-bitbucket',
 };
@@ -43,19 +41,14 @@ exports['passport-bitbucket'] = {
 ## Configuration
 
 ```js
-// {app_root}/config/config.default.js
-exports.passport = {
-  bitbucket: {
-
-  },
+// config/config.default.js
+exports.passportBitbucket = {
+  key: 'your oauth key',
+  secret: 'your oauth secret',
 };
 ```
 
 see [config/config.default.js](config/config.default.js) for more detail.
-
-## Example
-
-<!-- example here -->
 
 ## Questions & Suggestions
 
@@ -63,4 +56,4 @@ Please open an issue [here](https://github.com/eggjs/egg/issues).
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE.txt)
