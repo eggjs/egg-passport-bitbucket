@@ -1,9 +1,7 @@
 'use strict';
 
-exports.passport = {
-  bitbucket: {
-    clientID: '',
-    clientSecret: '',
-    callbackURL: '/passport/bitbucket/callback',
-  },
+exports.passportBitbucket = {
+  key: '',
+  secret: '',
+  callbackURL: '/passport/bitbucket/callback',
 };

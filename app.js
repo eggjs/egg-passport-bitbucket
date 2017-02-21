@@ -5,10 +5,12 @@ const assert = require('assert');
 const Strategy = require('passport-bitbucket-oauth2').Strategy;
 
 module.exports = app => {
-  const config = app.config.passport.bitbucket;
+  const config = app.config.passportBitbucket;
   config.passReqToCallback = true;
-  assert(config.clientID, '[egg-passport-bitbucket] config.passport.bitbucket.clientID required');
-  assert(config.clientSecret, '[egg-passport-bitbucket] config.passport.bitbucket.clientSecret required');
+  assert(config.key, '[egg-passport-bitbucket] config.passportBitbucket.key required');
+  assert(config.secret, '[egg-passport-bitbucket] config.passportBitbucket.secret required');
+  config.clientID = config.key;
+  config.clientSecret = config.secret;
 
   // must require `req` params
   app.passport.use('bitbucket', new Strategy(config, (req, accessToken, refreshToken, params, profile, done) => {
