@@ -16,7 +16,7 @@
     "passport-bitbucket"
   ],
   "dependencies": {
-    "debug": "^2.6.1",
+    "debug": "^3.1.0",
     "passport-bitbucket-oauth2": "^0.1.2"
   },
   "devDependencies": {
